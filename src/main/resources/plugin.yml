@@ -2,3 +2,11 @@ name: PowerCommand
 version: 1.0
 author: dwilson5817
 main: uk.me.dwilson.powercommand.Main
+commands:
+  powercommand:
+    description: PowerCommand base command
+    usage: /powercommand [subcommand]
+permissions:
+  powercommand.run:
+    description: Allows access to /powercommand run
+    default: op

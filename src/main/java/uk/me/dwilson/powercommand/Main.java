@@ -1,6 +1,7 @@
 package uk.me.dwilson.powercommand;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import uk.me.dwilson.powercommand.commands.CommandManager;
 import uk.me.dwilson.powercommand.utils.CommandsFileManager;
 
 /**
@@ -13,6 +14,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         getLogger().info("Loading PowerCommand...");
         commandsFileManager = new CommandsFileManager(this);
+        getCommand("powercommand").setExecutor(new CommandManager(this));
     }
 
     public CommandsFileManager getCommandsFileManager() {
