@@ -16,7 +16,7 @@ public class CommandsFileManager {
     public CommandsFileManager(Main main) {
         this.main = main;
 
-        if (!main.getDataFolder().mkdir()) {
+        if (main.getDataFolder().mkdir()) {
             main.getLogger().info("Created plugin data folder.");
         }
 
